@@ -5,4 +5,5 @@
   :components
   ((:file "packages-intrinsic")
    (:file "generic-functions")
-   (:file "hash-table-defclass-intrinsic")))
+   (:file "hash-table-defclass-intrinsic")
+   (:file "hashing-hash-table")))

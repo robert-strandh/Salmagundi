@@ -5,4 +5,5 @@
   :components
   ((:file "packages-extrinsic")
    (:file "generic-functions")
-   (:file "hash-table-defclass-extrinsic")))
+   (:file "hash-table-defclass-extrinsic")
+   (:file "hashing-hash-table")))
