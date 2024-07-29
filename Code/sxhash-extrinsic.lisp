@@ -52,6 +52,7 @@
     (t last-hash)))
 
 (defvar *depth* 3)
+
 (defun equal-hash (last-hash object)
   (when (zerop *depth*)
     (return-from equal-hash last-hash))
@@ -90,6 +91,7 @@
     (t (eq-hash last-hash object))))
 
 (defvar *sxhash-offset* 14695981039346656037)
+
 (defun sxhash (object)
   (ldb (byte 62 0)
        (equal-hash *sxhash-offset* object)))
@@ -99,6 +101,7 @@
     (eql    . ,#'eq-hash)
     (equal  . ,#'equal-hash)
     (equalp . ,#'equalp-hash)))
+
 (defun find-hash-function (name)
   (let ((pair (assoc name *standard-hash-functions*)))
     (if (null pair)
