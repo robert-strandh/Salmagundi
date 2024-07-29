@@ -23,8 +23,8 @@
 
 (defun eq-hash (last-hash object)
   (typecase object
-    ;; Instances of a built-in-class can't change-class, so we can gather some
-    ;; entropy from their classes at the very least.
+    ;; Instances of a built-in-class can't change-class, so we can
+    ;; gather some entropy from their classes at the very least.
     (cons      (fnv-1a last-hash 1))
     (character (let ((code (char-code object)))
                  (fnv-1a last-hash
