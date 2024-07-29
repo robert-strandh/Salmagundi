@@ -2,8 +2,8 @@
 
 (defconstant +fnv-prime+ 1099511628211)
 
-(declaim (inline %fnv-1a fnv-1a)
-         (optimize (speed 3)))
+(declaim (inline %fnv-1a fnv-1a))
+
 (defun %fnv-1a (last-hash byte)
   (declare ((unsigned-byte 8) byte)
            ((unsigned-byte 62) last-hash))
