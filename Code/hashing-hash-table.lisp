@@ -3,7 +3,6 @@
 (defgeneric hash-table-hash-function (hash-table))
 (defgeneric hash-table-offset (hash-table))
 
-(declaim (ftype (function (t t) (unsigned-byte 62)) hash))
 (defgeneric hash (hash-table key))
 
 (defclass hashing-hash-table (hash-table)
